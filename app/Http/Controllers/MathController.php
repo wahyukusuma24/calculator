@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class MathController extends Controller
 {
+    public function cal(Request $request){
+
+        $num =$request->submit;
+        return view('calculator', compact('num'));
+    }
+
     public function insert(Request $request)
     {
         $result = "";
